@@ -10,8 +10,7 @@ add_library(openmind SHARED
     ConvolutionEngine.cpp
     IrLoader.cpp
     AudioPlayer.cpp
-    # JNI bridge — próximo arquivo
-    # OpenMindJni.cpp
+    OpenMindJni.cpp
 )
 
 target_link_libraries(openmind
