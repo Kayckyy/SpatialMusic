@@ -19,6 +19,9 @@ public:
     void stop();
     bool isPlaying() const { return _playing.load(); }
 
+    // Troca o engine em tempo real (mudança de azimute/crossfeed)
+    void updateEngine(std::shared_ptr<ConvolutionEngine> engine) { _engine = std::move(engine); }
+
     // oboe callbacks
     oboe::DataCallbackResult onAudioReady(
         oboe::AudioStream* stream,
